@@ -1,0 +1,57 @@
+
+
+.custom-button span::before {
+  content: "";
+  position: absolute;
+  width: 8%;
+  height: 500%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-60deg);
+  background: #faf9f9;
+  transition: all 0.3s;
+  display: block;
+}
+
+.custom-button:hover span::before {
+  transform: translate(-50%, -50%) rotate(-90deg);
+  width: 100%;
+  background: royalblue;
+}
+
+.custom-button:hover {
+  color: white;
+}
+
+.custom-button:active span::before {
+  background: #2751cd;
+}
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll-on-hover {
+  animation: scrollLeft 10s linear infinite;
+}
+
+.animate-scroll-on-hover:hover {
+  animation-play-state: paused;
+}
+
+
+/* 
+bg-gradient-to-br from-[#2b015b] to-[#7a0236]   justify between
+bg-gradient-to-br from-[#2b015b] to-[#7a0236] text-white  main se nechy waly div
+bg-[#3c0a3e]  form k section
+border-pink-500 focus:ring-pink-400 bg-[#2e003d] text-white input 
+ <button className="relative inline-flex items-center justify-start px-6 py-3 overflow-hidden font-medium transition-all bg-gradient-to-br from-[#2b015b] to-[#7a0236] rounded-xl group hover:from-[#7a0236] hover:to-[#2b015b]">
+  <span className="absolute bottom-0 left-0 w-full h-0 transition-all duration-300 ease-out bg-pink-500 group-hover:h-full opacity-20"></span>
+  <span className="relative w-full text-left cursor-pointer text-white transition-colors duration-300 ease-in-out group-hover:text-pink-100">
+    Submit Feedback
+  </span>
+</button> */
