@@ -35,10 +35,10 @@ const categories = {
     { name: 'JavaScript', icon: <FaJs /> },
     { name: 'React', icon: <FaReact /> },
     { name: 'Angular', icon: <FaAngular /> },
-    { name: 'Vue.js', icon: <FaVuejs /> },
+    { name: 'Vuejs', icon: <FaVuejs /> },
   ],
   Backend: [
-    { name: 'Node.js', icon: <FaNodeJs /> },
+    { name: 'Nodejs', icon: <FaNodeJs /> },
     { name: 'Python', icon: <FaPython /> },
     { name: 'PHP', icon: <FaPhp /> },
     { name: 'Java', icon: <FaJava /> },

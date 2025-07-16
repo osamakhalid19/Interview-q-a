@@ -91,7 +91,7 @@ const interviewData = {
     },
   ],
 
-  [Node.js]: [
+  Nodejs: [
     {
       question: "What is Node.js?",
       answer: "Node.js is a runtime environment that allows executing JavaScript on the server-side."
@@ -159,7 +159,7 @@ const interviewData = {
     },
   ],
 
-  [Vue.js]: [
+  Vuejs: [
     {
       question: "What is Vue.js?",
       answer: "Vue.js is a progressive JavaScript framework for building user interfaces."
@@ -480,7 +480,7 @@ MongoDB: [
   }
 ],
 
- [DevTools] : [
+ DevTools : [
   {
     question: "What is Chrome DevTools and why is it used?",
     answer: "Chrome DevTools is a set of web developer tools built into Google Chrome. It’s used to inspect HTML/CSS, debug JavaScript, monitor performance, and analyze network activity."
