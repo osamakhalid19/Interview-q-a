@@ -61,7 +61,7 @@ const categories = {
     { name: 'Swift', icon: <FaSwift /> },
   ],
   Tools: [
-    { name: 'Dev Tools', icon: <FaTools /> },
+    { name: 'DevTools', icon: <FaTools /> },
   ],
 };
 
