@@ -23,10 +23,10 @@ const AboutUs = () => {
     <Navbar/>
     </nav>
     <main className="bg-[linear-gradient(to_right,#0f0c29,#302b63,#24243e)] ">
-      <div className=" dark:bg-gradient-to-br from-[#2b015b] to-[#7a0236] text-gray-800 dark:text-white px-6 py-20 md:py-28 lg:py-36 md:px-20 font-[Poppins]">
+      <div className=" text-gray-800 px-6 py-20 md:py-28 lg:py-36 md:px-20 font-[Poppins]">
         <div className="max-w-5xl mx-auto space-y-16">
           <h1
-            className={`text-3xl sm:text-4xl md:text-5xl font-extrabold text-center text-white dark:text-blue-400 relative 
+            className={`text-3xl sm:text-4xl md:text-5xl font-extrabold text-center text-white relative 
                 after:content-[''] after:block after:h-1 after:w-24 sm:after:w-36 after:bg-blue-800 after:mx-auto after:mt-2 rounded ${animate(0)}
                 `}
                 >
@@ -55,12 +55,12 @@ const AboutUs = () => {
 </section>
 
 
-            <section className={`bg-white dark:bg-[#3c0a3e]  px-6 py-12 md:px-20 ${animate(400)}`}>
+            <section className={`bg-white px-6 py-12 md:px-20 ${animate(400)}`}>
               <div className="max-w-3xl mx-auto space-y-6">
-                <h2 className="text-4xl font-bold text-center text-blue-900 dark:text-blue-400">
+                <h2 className="text-4xl font-bold text-center text-blue-900">
                   💬 We’d Love Your Feedback!
                 </h2>
-                <p className="text-center text-gray-700 dark:text-gray-300 text-lg">
+                <p className="text-center text-gray-700 text-lg">
                   Share your thoughts, suggestions, or appreciation — it helps us grow!
                 </p>
 
@@ -73,13 +73,13 @@ const AboutUs = () => {
                     name='name'
                     type="text"
                     placeholder="Your Good Name"
-                    className="w-full px-4 py-2 border border-gray-300  rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:border-pink-500 dark:focus:ring-pink-400 dark:bg-[#2e003d]  text-gray-900 dark:text-white"
+                    className="w-full px-4 py-2 border border-gray-300  rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900"
                     />
                   <textarea
                     name='message'
                     required
                     placeholder="Your message or feedback..."
-                    className="w-full h-32 px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-slate-800 text-gray-900 dark:text-white"
+                    className="w-full h-32 px-4 py-2 border border-gray-300 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900"
                   ></textarea>
 
                   <button
@@ -106,7 +106,7 @@ const AboutUs = () => {
               Have feedback or suggestions? Email us at:{' '}
               <a
                 href="mailto:testing.codecrack@gmail.com"
-                className="text-blue-300 dark:text-blue-300 underline"
+                className="text-blue-300 underline"
                 >
                 testing.codezode@gmail.com
               </a>

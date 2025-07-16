@@ -116,7 +116,7 @@ const InterviewPrep = () => {
       {/* Heading */}
       <div className="text-center mb-10 md:mb-14 font-[Poppins]">
         <h1
-            className={`text-3xl sm:text-4xl md:text-5xl font-extrabold text-center text-white dark:text-blue-400 relative 
+            className={`text-3xl sm:text-4xl md:text-5xl font-extrabold text-center text-white relative 
                  rounded ${animate(0)}
                 `}
                 >
@@ -133,7 +133,7 @@ const InterviewPrep = () => {
       {/* Dropdown Filter */}
       <div className={`flex justify-center mb-10 ${animate(200)}`}>
         <div className="relative inline-block text-left group">
-          <button className="flex items-center gap-2 px-6 py-3 font-medium text-black dark:text-white rounded-xl border border-gray-300 dark:border-gray-600 transition-all bg-white dark:bg-gray-800 hover:bg-blue-600 hover:text-white cursor-pointer font-[Poppins] duration-300">
+          <button className="flex items-center gap-2 px-6 py-3 font-medium text-black rounded-xl border border-gray-300 transition-all bg-white hover:bg-blue-600 hover:text-white cursor-pointer font-[Poppins] duration-300">
             {selected || 'Select Category'}
             <svg
               className={`w-4 h-4 transform transition-transform duration-300 ${
@@ -146,7 +146,7 @@ const InterviewPrep = () => {
             </svg>
           </button>
 
-          <ul className={`absolute left-0 w-full mt-2 rounded-xl shadow-lg  bg-white dark:bg-gray-800 border dark:border-gray-600 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-300 z-10`}>
+          <ul className={`absolute left-0 w-full mt-2 rounded-xl shadow-lg  bg-white border invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-300 z-10`}>
             {Object.keys(categories).map((cat) => (
               <li
               key={cat}

@@ -39,7 +39,7 @@ const Reviews = () => {
     
     <section className="bg-[linear-gradient(to_right,#0f0c29,#302b63,#24243e)] py-20 px-6 md:px-20">
      <h1
-            className={`text-3xl sm:text-4xl md:text-5xl mb-16 font-extrabold text-center font-[poppins] text-white dark:text-blue-400 relative 
+            className={`text-3xl sm:text-4xl md:text-5xl mb-16 font-extrabold text-center font-[poppins] text-white relative 
                  rounded 
                 `}
                 >
@@ -52,10 +52,10 @@ const Reviews = () => {
         <div className="flex space-x-8 animate-scroll-on-hover">
           {reviews.map((r, index) => (
             <div
-            key={index}
-            className="min-w-[300px] sm:min-w-[320px] md:min-w-[350px] max-w-md min-h-[260px] sm:min-h-[280px] md:min-h-[320px] lg:min-h-[380px] bg-white border border-blue-100 rounded-3xl p-8 shadow-lg hover:shadow-2xl transform hover:scale-95 transition-all duration-300 ease-in-out"
-            >
-              <p className="text-gray-700 text-lg md:text-xl mb-6 leading-relaxed font-medium">
+              key={index}
+              className="min-w-[300px] sm:min-w-[320px] md:min-w-[350px] max-w-md bg-white border border-blue-100 rounded-3xl p-8 shadow-lg hover:shadow-2xl transform hover:scale-95 transition-all duration-300 ease-in-out h-auto"
+              >
+              <p className="text-gray-700 text-lg md:text-xl mb-6 leading-relaxed font-medium break-words whitespace-normal">
                 “{r.review}”
               </p>
               <div className="text-right text-blue-800 font-semibold text-base md:text-lg">
