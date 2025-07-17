@@ -5,6 +5,26 @@ const interviewData = {
       answer: "The doctype declares the HTML version and helps browsers render the page correctly."
     },
     {
+      question: "Difference between <div> and <section> tags in HTML?",
+      answer: "<div>: Generic container with no semantic meaning.<section>: Denotes a thematic grouping of content, often with a headiing"
+    },
+    {
+      question: "What is the difference between the <b> tag and the <strong> tag?",
+      answer: "<b> tag is used for bold formatting, while <strong> tag is used to convey importance, typically rendered as bold but carries semantic meaning."
+    },
+    {
+      question: "What is the purpose of the alt attribute in <img> tags?",
+      answer: "The alt attribute specifies alternative text for an image if the image cannot be displayed. It is important for accessibility and SEO."
+    },
+    {
+      question: "What are meta tags, and how do they affect a web page?",
+      answer: " Provide metadata about the page. E.g., <meta charset=UTF-8> sets the character encoding."
+    },
+    {
+      question: "Purpose of the alt attribute in images?",
+      answer: "Describes the image for accessibility and is displayed if the image fails to load. "
+    },
+    {
       question: "What are semantic tags in HTML?",
       answer: "Semantic tags like <article>, <section>, <header>, <footer> describe the meaning of content, improving readability and accessibility."
     },
@@ -17,12 +37,64 @@ const interviewData = {
       answer: "Void elements are self-closing HTML tags like <br>, <img>, <input> that do not have closing tags."
     },
     {
+      question:"Explain the difference between GET and POST methods in HTML forms.",
+      answer: "GET method sends data through the URL, while POST method sends data in the HTTP request body. GET is used for retrieving data, while POST is used for submitting data."
+    },
+    {
       question: "How do you make a hyperlink open in a new tab?",
       answer: "Use the target='_blank' attribute on the <a> tag."
     },
   ],
-
+  
   CSS: [
+    {
+      question: "What is the difference between margin: auto and margin: 0 auto?",
+      answer: "margin: auto centers an element horizontally within its containing element, while margin: 0 auto centers an element both horizontally and vertically within its containing element."
+    },
+    {
+      question: "What is the purpose of the overflow property in CSS?",
+      answer: "The overflow property specifies what happens if the content of an element overflows its box. Values include visible, hidden, scroll, and auto."
+    },
+    {
+      question: "What is the purpose of the CSS filter property?",
+      answer: "The filter property applies graphical effects like blur, grayscale, contrast, brightness, and more to an element's content."
+    },
+    {
+      question: "Explain the difference between CSS transitions and CSS animations.",
+      answer: "CSS transitions are used to smoothly change CSS property values over a specified duration, while CSS animations allow for more complex and customized animations by defining keyframes and animation properties."
+    },
+    {
+      question: "What is the purpose of the CSS object-fit property?",
+      answer: "The object-fit property specifies how the content of an element should be resized to fit its container. Values include fill, contain, cover, none, and scale-down."
+    },
+    {
+      question: "What is the purpose of the CSS pseudo-elements::before and ::after?",
+      answer: "The::before and::after pseudo-elements are used to insert content before and after an element's content, respectively. They are often used for decorative elements or adding content using CSS."
+    },
+    {
+      question: "What is the difference between the display: none and visibility: hidden properties?",
+      answer: "display: none hides the element completely and removes it from the document flow, while visibility: hidden hides the element but still occupies space in the document flow."
+    },
+    {
+      question: "What is the purpose of the z-index property in CSS?",
+      answer: "The z-index property specifies the stack order of an element along the z-axis (front/back). It is used to control the stacking order of positioned elements."
+    },
+    {
+      question: "What are pseudo-classes in CSS?",
+      answer: "Pseudo-classes are keywords added to selectors that specify a special state of the selected element. Examples include :hover, :active, :first-child, etc."
+    },
+    {
+      question: "Explain the difference between margin and padding?",
+      answer: "Margin is the space outside the border of an element, while padding is the space between the element's content and its border."
+    },
+    {
+      question: "Difference between inline, block, and inline-block elements?",
+      answer: "inline: No new line; width/height not respected (e.g., <span>).block: Occupies full width (e.g., <div>).inline-block: Combines properties of both."
+    },
+    {
+      question: "Difference between id and class selectors in CSS?",
+      answer: "id: Unique, applied to one element (#id).class: Reusable, applied to multiple elements (.class)."
+    },
     {
       question: "What is the difference between relative and absolute positioning in CSS?",
       answer: "Relative is positioned relative to its normal position, while absolute is positioned relative to its nearest positioned ancestor."
@@ -44,7 +116,7 @@ const interviewData = {
       answer: "Media queries allow responsive design by applying styles based on device width, height, or resolution."
     },
   ],
-
+  
   JavaScript: [
     {
       question: "What is the difference between var, let, and const?",
@@ -67,19 +139,67 @@ const interviewData = {
       answer: "Event delegation allows handling events at a higher level by taking advantage of event bubbling."
     },
   ],
-
+  
   React: [
+    {
+      question: "What is ReactJS?",
+      answer: "A JavaScript library for building fast and interactive user interfaces using components and virtual DOM."
+    },
     {
       question: "What is JSX?",
       answer: "JSX is a syntax extension for JavaScript that looks like HTML and is used with React to describe UI structure."
     },
     {
-      question: "What are props in React?",
-      answer: "Props are inputs passed to components to configure them."
+      question: "What are hooks in React?",
+      answer: "Functions (like useState, useEffect) that let functional components use state and lifecycle features."
     },
     {
-      question: "What is the useState hook?",
-      answer: "`useState` is a React hook that lets you add state to functional components."
+      question: "What is useState in React?",
+      answer: "useState is a React Hook that allows you to create reactive variables — also known as state — inside functional components.When setCount is called, React re-renders the component with the updated state."
+    },
+    {
+      question: "What is Redux, and how does it integrate with React?",
+      answer: "A state management library. React components can access/store global state via the Redux store using hooks or connect."
+    },
+    {
+      question: "What is context in React?",
+      answer: "A way to pass data deeply through the component tree without passing props at every level."
+    },
+    {
+      question: "What is the useMemo hook?",
+      answer: "Caches a computed value between renders unless dependencies change, optimizing performance."
+    },
+    {
+      question: "What is useRef being used for?",
+      answer: "useRef is a hook that allows you to create a reference to a DOM node or a JavaScript object. It can be used to access a DOM node directly, or to store a value that should not cause a re-render when it changes."
+    },
+    {
+      question: "Difference between useEffect and useLayoutEffect?",
+      answer: "useEffect runs asynchronously after rendering; useLayoutEffect runs synchronously after rendering but before the browser repaints."
+    },
+    {
+      question: "What are the advantages of using React?",
+      answer: "React offers a virtual DOM for improved performance, a component-based architecture for modular development, and a strong community support, among other advantages."
+    },
+    {
+      question: "How do you manage global state in React?",
+      answer: "With context API, Redux, MobX, Zustand, or other state management libraries?"
+    },
+    {
+      question: "What are fragments in React?",
+      answer: "A way to group multiple elements without adding an extra DOM node:<></>"
+    },
+    {
+      question: "What is prop drilling and how do you avoid it?",
+      answer: "Passing props through multiple levels of components. Avoid with Context API or state management libraries."
+    },
+    {
+      question: "How does the virtual DOM work in React?",
+      answer: "It's a lightweight replica of the actual DOM. React updates the virtual DOM first, then efficiently updates the real DOM only where changes occurred."
+    },
+    {
+      question: "What are props in React?",
+      answer: "Props are inputs passed to components to configure them."
     },
     {
       question: "What is the difference between controlled and uncontrolled components?",

@@ -92,10 +92,13 @@ const fadeUp = {
 const InterviewPrep = () => {
   const [visible, setVisible] = useState(false);
   const [selected, setSelected] = useState('');
+  const [dropdownOpen, setDropdownOpen] = useState(false); 
+
   
   const allSubcategories = Object.values(categories).flat();
   const subcategories = selected ? categories[selected] : allSubcategories;
-  
+  const toggleDropdown = () => setDropdownOpen(prev => !prev);
+
   useEffect(() => {
       const timer = setTimeout(() => setVisible(true), 300);
       return () => clearTimeout(timer);
@@ -113,7 +116,6 @@ const InterviewPrep = () => {
 
     <main>
     <div className="min-h-screen bg-[linear-gradient(to_right,#0f0c29,#302b63,#24243e)] text-white px-4 py-20 md:py-28 lg:py-36">
-      {/* Heading */}
       <div className="text-center mb-10 md:mb-14 font-[Poppins]">
         <h1
             className={`text-3xl sm:text-4xl md:text-5xl font-extrabold text-center text-white relative 
@@ -130,43 +132,57 @@ const InterviewPrep = () => {
         </p>
       </div>
 
-      {/* Dropdown Filter */}
       <div className={`flex justify-center mb-10 ${animate(200)}`}>
-        <div className="relative inline-block text-left group">
-          <button className="flex items-center gap-2 px-6 py-3 font-medium text-black rounded-xl border border-gray-300 transition-all bg-white hover:bg-blue-600 hover:text-white cursor-pointer font-[Poppins] duration-300">
-            {selected || 'Select Category'}
-            <svg
-              className={`w-4 h-4 transform transition-transform duration-300 ${
-                selected ? 'rotate-180' : 'rotate-0'
-              }`}
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              >
-              <path d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.185l3.71-3.955a.75.75 0 1 1 1.08 1.04l-4.24 4.52a.75.75 0 0 1-1.08 0l-4.24-4.52a.75.75 0 0 1 .02-1.06z" />
-            </svg>
-          </button>
+      <div className="relative inline-block text-left group">
+        <button
+          onClick={toggleDropdown} // 👈 toggle on click
+          className="flex items-center gap-2 px-6 py-3 font-medium text-black rounded-xl border border-gray-300 transition-all bg-white hover:bg-blue-600 hover:text-white cursor-pointer font-[Poppins] duration-300"
+        >
+          {selected || 'Select Category'}
+          <svg
+            className={`w-4 h-4 transform transition-transform duration-300 ${
+              selected ? 'rotate-180' : 'rotate-0'
+            }`}
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.185l3.71-3.955a.75.75 0 1 1 1.08 1.04l-4.24 4.52a.75.75 0 0 1-1.08 0l-4.24-4.52a.75.75 0 0 1 .02-1.06z" />
+          </svg>
+        </button>
 
-          <ul className={`absolute left-0 w-full mt-2 rounded-xl shadow-lg  bg-white border invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-300 z-10`}>
-            {Object.keys(categories).map((cat) => (
-              <li
-              key={cat}
-              onClick={() => setSelected(cat)}
-              className="px-6 py-3 text-black hover:bg-blue-600 hover:text-white cursor-pointer font-[Poppins] transition-all rounded-xl"
-              >
-                {cat}
-              </li>
-            ))}
+        <ul
+          className={`
+            absolute left-0 w-full mt-2 rounded-xl shadow-lg bg-white border transition-all duration-300 z-10
+            ${dropdownOpen ? 'visible opacity-100' : 'invisible opacity-0'}
+            group-hover:visible group-hover:opacity-100
+          `}
+        >
+          <li
+            onClick={() => {
+              setSelected('');
+              setDropdownOpen(false); 
+            }}
+            className="px-6 py-3 text-black font-[Poppins] hover:bg-blue-600 hover:text-white cursor-pointer rounded-xl transition-all"
+          >
+            Show All
+          </li>
+          {Object.keys(categories).map((cat) => (
             <li
-              onClick={() => setSelected('')}
-              className="px-6 py-3 text-black font-[Poppins] hover:bg-blue-600 hover:text-white cursor-pointer rounded-xl transition-all"
-              >
-              Show All
+              key={cat}
+              onClick={() => {
+                setSelected(cat);
+                setDropdownOpen(false); 
+              }}
+              className="px-6 py-3 text-black hover:bg-blue-600 hover:text-white cursor-pointer font-[Poppins] transition-all rounded-xl"
+            >
+              {cat}
             </li>
-          </ul>
-        </div>
+          ))}
+        </ul>
       </div>
+    </div>
 
-      {/* Cards */}
+      
       <div className={`grid-cols-1 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto`}>
         {subcategories.map((sub, index) => (
           <Link to={`/interview-prep/${sub.name}`} key={sub.name}>
