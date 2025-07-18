@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Footer from './Footer';
 import Navbar from './Navbar';
+import { Helmet } from 'react-helmet';
 import TopButton from './Topbutton';
 
 const AboutUs = () => {
@@ -19,6 +20,10 @@ const AboutUs = () => {
 
   return (
     <>
+    <Helmet>
+      <title>About CodeZode – Empowering Developers for Global Tech Careers</title>
+      <meta name='description' content='Learn how CodeZode helps developers worldwide land top jobs through structured interview prep, real success stories, and a growing dev community.'/>
+    </Helmet>
     <nav>
     <Navbar/>
     </nav>

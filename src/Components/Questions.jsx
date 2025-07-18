@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import TopButton from './Topbutton';
@@ -110,6 +111,10 @@ const InterviewPrep = () => {
       } delay-[${delay}ms]`;
   return (
     <>
+    <Hemlet>
+      <title>Interview Questions & Answers for Developers – Html, Css, JS, Java, Python, React, Node.js PHP and all interview questions related category (2025)</title>
+      <meta name='description' content='Master your next tech interview with hand-picked questions and detailed answers for Java, React, JavaScript, Python, and more. Practice coding, system design, and DSA – all in one place.'/>
+    </Hemlet>
     <nav>
     <Navbar/>
     </nav>
@@ -135,7 +140,7 @@ const InterviewPrep = () => {
       <div className={`flex justify-center mb-10 ${animate(200)}`}>
       <div className="relative inline-block text-left group">
         <button
-          onClick={toggleDropdown} // 👈 toggle on click
+          onClick={toggleDropdown}
           className="flex items-center gap-2 px-6 py-3 font-medium text-black rounded-xl border border-gray-300 transition-all bg-white hover:bg-blue-600 hover:text-white cursor-pointer font-[Poppins] duration-300"
         >
           {selected || 'Select Category'}

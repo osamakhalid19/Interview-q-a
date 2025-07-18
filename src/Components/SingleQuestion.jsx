@@ -47,7 +47,6 @@ const SingleQuestion = () => {
         <div className="min-h-screen px-4 pt-24 pb-12 bg-[linear-gradient(to_right,#0f0c29,#302b63,#24243e)] text-white">
           <div className="max-w-5xl mx-auto space-y-10">
 
-            {/* Back Button */}
             <div>
               <Link to="/interview-prep">
                 <button
@@ -64,12 +63,10 @@ const SingleQuestion = () => {
               </Link>
             </div>
 
-            {/* Heading Below Button */}
             <h2 className="text-2xl sm:text-3xl font-bold text-center">
               Most Popular & Frequently Asked {category} Questions
             </h2>
 
-            {/* Questions */}
             <div className="space-y-6">
               {data.map((item, idx) => (
                 <motion.div
@@ -80,7 +77,6 @@ const SingleQuestion = () => {
                   variants={fadeUp}
                   className="bg-gray-100 hover:scale-103 transition-transform duration-300 text-black p-6 rounded-xl shadow-md cursor-pointer relative group"
                 >
-                  {/* Copy Button */}
                   <button
                     onClick={() =>
                       handleCopy(`Q: ${item.question}\nA: ${item.answer}`)

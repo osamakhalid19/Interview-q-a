@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import {Helmet} from 'react-helmet';
 import Navbar from './Navbar';
 import Whyuse from './Whyuse';
 import { Link } from 'react-router-dom';
@@ -33,6 +34,10 @@ const Home = () => {
 
   return (
     <>
+    <Helmet>
+      <title>CodeZode – Top Interview Questions & Coding Prep for Developers (2025)</title>
+      <meta name='description' content='Prepare for your dream tech job with CodeZode! Get access to top interview questions, answers, and coding challenges for Java, Python, React, and more. Updated for 2025.' />
+    </Helmet>
     <main>
     <div
       className="h-screen bg-cover bg-center relative"

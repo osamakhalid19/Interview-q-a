@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import { Helmet } from 'react-helmet';
 import TopButton from './Topbutton';
 
 const PrivacyPolicy = () => {
@@ -15,6 +16,10 @@ const PrivacyPolicy = () => {
 
   return (
     <>
+    <Helmet>
+      <title>CodeZode Privacy Policy – Your Data, Our Responsibility</title>
+      <meta name='description' content='Read how CodeZode collects, uses, and protects your data. Your privacy is important to us. Full GDPR and CCPA compliance information included.' />
+    </Helmet>
       <nav>
 <Navbar/>
       </nav>
@@ -37,7 +42,6 @@ const PrivacyPolicy = () => {
               At <span className="font-bold text-white">Code Zode</span>, we value your privacy. Here’s how we handle information while you browse our website.
             </p>
 
-            {/* Policy Sections */}
             <section className="space-y-8 text-base md:text-lg">
               <div className={`transition-all duration-1000 ease-out delay-300 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
                 <h2 className="text-2xl font-bold mb-2">1. No Personal Data Collection</h2>
