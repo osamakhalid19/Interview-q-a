@@ -63,9 +63,9 @@ const SingleQuestion = () => {
               </Link>
             </div>
 
-            <h2 className="text-2xl sm:text-3xl font-bold text-center">
+            <h1 className="text-2xl sm:text-3xl font-bold text-center">
               Most Popular & Frequently Asked {category} Questions
-            </h2>
+            </h1>
 
             <div className="space-y-6">
               {data.map((item, idx) => (
