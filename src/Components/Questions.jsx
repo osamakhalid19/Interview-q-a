@@ -111,10 +111,10 @@ const InterviewPrep = () => {
       } delay-[${delay}ms]`;
   return (
     <>
-    <Hemlet>
+    <Helmet>
       <title>Interview Questions & Answers for Developers – Html, Css, JS, Java, Python, React, Node.js PHP and all interview questions related category (2025)</title>
       <meta name='description' content='Master your next tech interview with hand-picked questions and detailed answers for Java, React, JavaScript, Python, and more. Practice coding, system design, and DSA – all in one place.'/>
-    </Hemlet>
+    </Helmet>
     <nav>
     <Navbar/>
     </nav>
