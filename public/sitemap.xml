@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://www.codezode.com/</loc>
+    <lastmod>2025-07-09</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.codezode.com/about-us</loc>
+    <lastmod>2025-07-09</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.codezode.com/privacy-policy</loc>
+    <lastmod>2025-07-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.codezode.com/interview-prep</loc>
+    <lastmod>2025-07-09</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Dynamic Category Pages -->
+  <url><loc>https://www.codezode.com/interview-prep/HTML</loc><lastmod>2025-07-09</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.codezode.com/interview-prep/CSS</loc><lastmod>2025-07-09</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.codezode.com/interview-prep/JavaScript</loc><lastmod>2025-07-09</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.codezode.com/interview-prep/React</loc><lastmod>2025-07-09</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.codezode.com/interview-prep/Angular</loc><lastmod>2025-07-09</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.codezode.com/interview-prep/Vuejs</loc><lastmod>2025-07-09</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.codezode.com/interview-prep/Nodejs</loc><lastmod>2025-07-09</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.codezode.com/interview-prep/Python</loc><lastmod>2025-07-09</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.codezode.com/interview-prep/PHP</loc><lastmod>2025-07-09</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.codezode.com/interview-prep/Java</loc><lastmod>2025-07-09</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.codezode.com/interview-prep/Laravel</loc><lastmod>2025-07-09</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.codezode.com/interview-prep/MySQL</loc><lastmod>2025-07-09</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.codezode.com/interview-prep/PostgreSQL</loc><lastmod>2025-07-09</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.codezode.com/interview-prep/MongoDB</loc><lastmod>2025-07-09</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.codezode.com/interview-prep/Git</loc><lastmod>2025-07-09</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.codezode.com/interview-prep/Docker</loc><lastmod>2025-07-09</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.codezode.com/interview-prep/AWS</loc><lastmod>2025-07-09</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.codezode.com/interview-prep/Linux</loc><lastmod>2025-07-09</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.codezode.com/interview-prep/Android</loc><lastmod>2025-07-09</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.codezode.com/interview-prep/iOS</loc><lastmod>2025-07-09</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.codezode.com/interview-prep/Swift</loc><lastmod>2025-07-09</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.codezode.com/interview-prep/DevTools</loc><lastmod>2025-07-09</lastmod><priority>0.9</priority></url>
+</urlset>
