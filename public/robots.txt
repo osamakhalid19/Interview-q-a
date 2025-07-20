@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://www.codezode.com/sitemap.xml
+Sitemap: https://codezode.com/sitemap.xml
