@@ -105,6 +105,10 @@ const InterviewPrep = () => {
       return () => clearTimeout(timer);
     }, []);
 
+    useEffect(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' }); 
+    }, []);
+
   const animate = (delay = 0) =>
       `transition-all duration-2500 ease-out transform ${
         visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'

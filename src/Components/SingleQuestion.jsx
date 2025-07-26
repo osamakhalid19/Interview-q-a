@@ -24,9 +24,14 @@ const SingleQuestion = () => {
     return () => clearTimeout(timer);
   }, []);
 
+  useEffect(() => {
+  window.scrollTo({ top: 0, behavior: 'smooth' }); 
+}, []);
+
   const { category } = useParams();
   const data = questions[category];
 
+  
   const handleCopy = (text) => {
     navigator.clipboard.writeText(text);
   };

@@ -13,6 +13,10 @@ const AboutUs = () => {
     return () => clearTimeout(timer);
   }, []);
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' }); 
+  }, []);
+
   const animate = (delay = 0) =>
     `transition-all duration-2500 ease-out transform ${
       visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
@@ -106,7 +110,7 @@ const AboutUs = () => {
             </section>
 
           <section className={`space-y-8 text-center ${animate(500)}`}>
-            <h2 className="text-3xl text-blue-400 md:text-4xl font-semibold">📩 Get in Touch</h2>
+            <h2 className="text-3xl text-blue-300 md:text-4xl font-semibold">📩 Get in Touch</h2>
             <p className="text-base md:text-xl text-white">
               Have feedback or suggestions? Email us at:{' '}
               <a
