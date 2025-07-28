@@ -163,10 +163,11 @@ const toggleDropdown = () => {
       </div>
 
       <div className={`flex justify-center mb-10 ${animate(200)}`}>
-     <div ref={dropdownRef}
-       className="relative inline-block text-left group">
+    <div ref={dropdownRef} className="relative inline-block text-left">
   <button
     onClick={toggleDropdown}
+    onMouseEnter={() => window.innerWidth > 768 && setDropdownOpen(true)}
+    onMouseLeave={() => window.innerWidth > 768 && setDropdownOpen(false)}
     className="flex items-center gap-2 px-6 py-3 font-medium text-black rounded-xl border border-gray-300 transition-all bg-white hover:bg-blue-600 hover:text-white cursor-pointer font-[Poppins] duration-300"
   >
     {selected || 'Select Category'}
@@ -182,15 +183,16 @@ const toggleDropdown = () => {
   </button>
 
   <ul
-    className={`
-      absolute left-0 w-full mt-2 rounded-xl shadow-lg bg-white border transition-all duration-300 z-10
+    onMouseEnter={() => window.innerWidth > 768 && setDropdownOpen(true)}
+    onMouseLeave={() => window.innerWidth > 768 && setDropdownOpen(false)}
+    className={`absolute left-0 w-full mt-2 rounded-xl shadow-lg bg-white border transition-all duration-300 z-10
       ${dropdownOpen ? 'visible opacity-100' : 'invisible opacity-0'}
-      group-hover:visible group-hover:opacity-100
     `}
   >
     <li
       onClick={() => {
         setSelected('');
+        setDropdownOpen(false); 
       }}
       className="px-6 py-3 text-black font-[Poppins] hover:bg-blue-600 hover:text-white cursor-pointer rounded-xl transition-all"
     >
@@ -210,6 +212,7 @@ const toggleDropdown = () => {
     ))}
   </ul>
 </div>
+
 
     </div>
 

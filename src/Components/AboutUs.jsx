@@ -3,6 +3,7 @@ import Footer from './Footer';
 import Navbar from './Navbar';
 import { Helmet } from 'react-helmet';
 import TopButton from './Topbutton';
+import toast, { Toaster } from 'react-hot-toast';
 
 const AboutUs = () => {
   const [visible, setVisible] = useState(false);
@@ -30,6 +31,7 @@ const AboutUs = () => {
     </Helmet>
     <nav>
     <Navbar/>
+    <div><Toaster/></div>
     </nav>
     <main className="bg-[linear-gradient(to_right,#0f0c29,#302b63,#24243e)] ">
       <div className=" text-gray-800 px-6 py-20 md:py-28 lg:py-36 md:px-20 font-[Poppins]">
@@ -77,6 +79,7 @@ const AboutUs = () => {
                  action="https://formspree.io/f/xyzpynpr"  
                  method="POST"
                  className="space-y-4"
+                 onSubmit={()=>toast.success("Thanks for your Feedback")}
 >
                   <input
                     name='name'

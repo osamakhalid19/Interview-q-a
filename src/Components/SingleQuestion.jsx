@@ -6,6 +6,8 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import TopButton from './Topbutton';
 import { FaCopy } from 'react-icons/fa';
+import toast, { Toaster } from 'react-hot-toast';
+
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -34,6 +36,8 @@ const SingleQuestion = () => {
   
   const handleCopy = (text) => {
     navigator.clipboard.writeText(text);
+    toast.success('Copied to clipboard')
+
   };
 
   if (!data) {
@@ -47,7 +51,9 @@ const SingleQuestion = () => {
   return (
     <>
       <Navbar />
-
+    <div>
+      <Toaster/>
+      </div> 
       <main>
         <div className="min-h-screen px-4 pt-24 pb-12 bg-[linear-gradient(to_right,#0f0c29,#302b63,#24243e)] text-white">
           <div className="max-w-5xl mx-auto space-y-10">
