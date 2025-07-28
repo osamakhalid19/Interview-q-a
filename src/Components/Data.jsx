@@ -416,7 +416,7 @@ const interviewData = {
   }
 ],
 
-PostgreSQL:[
+  PostgreSQL:[
   {
     "question": "What are the key differences between PostgreSQL and MySQL?",
     "answer": "PostgreSQL is more feature-rich with support for advanced types, full ACID compliance, and extensibility. MySQL is often faster for read-heavy workloads but has fewer advanced features."
@@ -439,7 +439,7 @@ PostgreSQL:[
   }
 ],
  
-MongoDB: [
+  MongoDB: [
   {
     "question": "What is the difference between document and collection in MongoDB?",
     "answer": "A document is a single JSON-like object (BSON), while a collection is a group of such documents. Collections are like tables in RDBMS."
@@ -462,7 +462,7 @@ MongoDB: [
   }
 ],
 
- Docker : [
+  Docker : [
   {
     question: "What is the difference between a Docker container and a virtual machine?",
     answer: "Containers share the host OS kernel and are more lightweight, while virtual machines include a full guest OS and are more resource-heavy."
@@ -485,7 +485,7 @@ MongoDB: [
   }
 ],
 
- AWS : [
+  AWS : [
   {
     question: "What is the difference between EC2, Lambda, and ECS?",
     answer: "EC2 provides virtual servers, Lambda runs code without servers (serverless), and ECS is used to run Docker containers at scale."
@@ -508,7 +508,7 @@ MongoDB: [
   }
 ],
 
- Linux : [
+  Linux : [
   {
     question: "How does the Linux file permission system work (rwx)?",
     answer: "'r' is read, 'w' is write, and 'x' is execute. Permissions are set for user, group, and others."
@@ -531,7 +531,7 @@ MongoDB: [
   }
 ],
 
- Android : [
+  Android : [
   {
     question: "What is the Android Activity lifecycle?",
     answer: "The lifecycle includes: onCreate(), onStart(), onResume(), onPause(), onStop(), onDestroy(). These manage the state of an Activity."
@@ -554,7 +554,7 @@ MongoDB: [
   }
 ],
 
- iOS : [
+  iOS : [
   {
     question: "What is the difference between frame, bounds, and center in iOS views?",
     answer: "Frame is the view’s location and size in the superview, bounds is its own coordinate space, and center is the midpoint in the superview."
@@ -577,7 +577,7 @@ MongoDB: [
   }
 ],
 
- Swift : [
+  Swift : [
   {
     question: "What is the difference between 'struct' and 'class' in Swift?",
     answer: "Structs are value types (copied when assigned), classes are reference types (shared reference)."
@@ -600,7 +600,7 @@ MongoDB: [
   }
 ],
 
- DevTools : [
+  DevTools : [
   {
     question: "What is Chrome DevTools and why is it used?",
     answer: "Chrome DevTools is a set of web developer tools built into Google Chrome. It’s used to inspect HTML/CSS, debug JavaScript, monitor performance, and analyze network activity."
