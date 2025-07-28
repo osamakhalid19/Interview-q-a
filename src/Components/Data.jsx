@@ -127,6 +127,42 @@ const interviewData = {
       answer: "A closure is a function that retains access to its lexical scope even when executed outside of its scope."
     },
     {
+      question: "What is the this keyword? How does it behave in different contexts?",
+      answer: "Refers to the object calling the function.In global context: window (in browsers).In strict mode: undefined.In arrow functions: lexically bound (doesn't change based on caller)."
+    },
+    {
+      question: "What is the difference between shallow copy and deep copy?",
+      answer: "Shallow copy copies references to nested objects.Deep copy duplicates all levels of the object."
+    },
+    {
+      question: "What is setTimeout and setInterval?",
+      answer: "setTimeout runs a function once after a delay (in milliseconds). setInterval runs a function repeatedly at fixed intervals."
+    },
+    {
+      question: "What is async/await in JavaScript?",
+      answer: "sync/await is a modern syntax to handle asynchronous code in a cleaner, promise-based way.async makes a function return a Promise. await pauses the execution until the Promise resolves."
+    },
+    {
+      question: "What is the difference between synchronous and asynchronous functions?",
+      answer: "Synchronous functions block code execution until they finish. Asynchronous functions allow other code to run while waiting for a task (like a network request) to complete."
+    },
+    {
+      question: "What is a prototype in JavaScript?",
+      answer: "A prototype is an object from which other objects inherit properties. Every JavaScript object has a hidden internal property [[Prototype]] that links to another object—its prototype."
+    },
+    {
+      question: "What are the different ways an HTML element can be accessed in a JavaScript code?",
+      answer: "Here are the ways an HTML element can be accessed in a JavaScript code: getElementByClass(‘classname’): Gets all the HTML elements with the specified classname.getElementById(‘idname’): Gets an HTML element by its ID name. getElementbyTagName(‘tagname’): Gets all the HTML elements that have the specified tagname. querySelector(): Takes CSS style selector and returns the first selected HTML element."
+    },
+    {
+      question: "What is Callback in JavaScript?",
+      answer: "A callback is a JavaScript function passed to another function as an argument or a parameter. This function is to be executed whenever the function that it is passed to gets executed."
+    },
+    {
+      question: "What are the scopes of a variable in JavaScript?",
+      answer: "There are two scopes of a variable: - Global Scope: Global variables with global scope are available everywhere in JavaScript code.- Local Scope: Local variables are accessible only within the function in which they are defined."
+    },
+    {
       question: "What is hoisting in JavaScript?",
       answer: "Hoisting is JavaScript's behavior of moving declarations to the top of the scope before code execution."
     },
@@ -311,16 +347,60 @@ const interviewData = {
       answer: "Lists are mutable and tuples are immutable."
     },
     {
+      question: "What are Python’s data types?",
+      answer: "Common types include int, float, str, list, tuple, dict, set, and bool."
+    },
+    {
+    question: "What is the difference between _init_ and _str_?",
+    answer: "_init_ initializes objects; _str_ returns a string representation of the object."
+    },
+    {
+    question: "How does Python manage memory?",
+    answer: "Through reference counting and garbage collection."
+    },
+    {
+    question: "What are mutable and immutable types?",
+    answer: "Mutable types (like lists, dicts) can be changed; immutable types (like int, str, tuple) cannot.A function that uses yield to return an iterator one value at a time. Code: def count_up(): yield 1   yield 2"
+    },
+    {
+    question: "What is the difference between threading and multiprocessing?",
+    answer: "Threading runs multiple tasks within the same process (shared memory).Multiprocessing runs separate processes (isolated memory) for true parallelism."
+    },
+    {
+    question: "What is the Global Interpreter Lock (GIL)?",
+    answer: "A mutex that allows only one thread to execute Python bytecode at a time, affecting threading performance."
+    },
+    {
+      question: "What is list comprehension?",
+    answer: "A concise way to create lists:  CODE:- squares = [x*x for x in range(5)]"
+  },
+    {
+      question: "What is a lambda function?",
+      answer: "An anonymous, single-expression function: CODE:-  add = lambda x, y: x + y"
+    },
+    {
+      question: "What are some popular Python libraries?",
+      answer: "Data analysis: pandas, numpy. Web: Django, Flask. Scraping: requests, BeautifulSoup, SeleniumMachine. Learning: scikit-learn, TensorFlow, PyTorch"
+    },
+    {
+      question: "What is inheritance?",
+      answer: "A mechanism where a class (child) derives properties from another class (parent)."
+    },
+    {
+      question: "What is a class in Python?",
+    answer: "A blueprint for creating objects, bundling data and functions together."
+    },
+    {
+      question: "How is a set different from a list?",
+      answer: "Sets are unordered, unique collections; lists are ordered and can have duplicates."
+    },
+    {
       question: "What are Python decorators?",
       answer: "Decorators are functions that modify the behavior of another function or method without changing its source code."
     },
     {
       question: "What is PEP 8?",
       answer: "PEP 8 is the style guide for writing Python code, improving its readability and consistency."
-    },
-    {
-      question: "What are Python’s data types?",
-      answer: "Common types include int, float, str, list, tuple, dict, set, and bool."
     },
   ],
 
@@ -388,6 +468,58 @@ const interviewData = {
       answer: "Middleware filters HTTP requests entering the application, often used for authentication and logging."
     },
     {
+      question: "How do you handle authentication in Laravel?",
+      answer: "Laravel provides a built-in authentication system that makes it easy to authenticate users with features like user registration, login, password reset, and session management. Developers can use Laravel's authentication scaffolding or customize it to fit their application's requirements."
+    },
+    {
+      question: "What is Laravel Horizon?",
+      answer: "Laravel Horizon is a dashboard and monitoring tool for Laravel's queue system. It provides insights into queued jobs, failed jobs, throughput, and performance metrics, allowing developers to optimize and manage their application's background processing tasks."
+    },
+    {
+      question: "What is a Laravel Passport?",
+      answer: "Laravel Passport is an OAuth2 server implementation built on top of Laravel. It provides a simple and secure way to implement authentication and authorization for APIs by issuing access tokens and managing token-based authentication."
+    },
+    {
+      question: "Explain Laravel Cashier.",
+      answer: "Laravel Cashier is a package for handling subscription billing and recurring payments in Laravel applications. It provides a fluent interface for managing subscriptions, handling subscription billing cycles, and integrating with popular payment gateways like Stripe and Braintree"
+    },
+    {
+      question: "What is Laravel Socialite?",
+      answer: "Laravel Socialite is an OAuth authentication package that simplifies the process of integrating social authentication providers like Facebook, Twitter, Google, and GitHub into Laravel applications. It provides a unified API for authenticating users via social media platforms."
+    },
+    {
+      question: "What is Laravel Valet?",
+      answer: "Laravel Valet is a development environment tool for macOS that provides a simple way to serve Laravel applications locally. It configures your system to run PHP applications using Nginx and Dnsmasq, making it easy to develop and test Laravel projects on your local machine"
+    },
+    {
+      question: "What are service providers in Laravel?",
+      answer: "Service providers in Laravel are the central place to configure and register services like bindings, event listeners, middleware, etc. They are responsible for bootstrapping the framework and registering things into the service container."
+    },
+    {
+      question: "What is the difference between Laravel and Lumen?",
+      answer: "Laravel and Lumen are both PHP frameworks created by Taylor Otwell. While Laravel is a full-featured framework suitable for building large-scale applications, Lumen is a lightweight micro-framework designed for developing fast and efficient APIs and microservices"
+    },
+    {
+      question: "What is Laravel Artisan?",
+      answer: "Artisan is a command-line interface included with Laravel that provides a variety of useful commands for tasks such as generating code, running migrations, clearing caches, and managing application assets. It simplifies common development tasks and boosts developer productivity."
+    },
+    {
+      question: "What is a Blade templating engine?",
+      answer: "Blade is Laravel's powerful templating engine that enables developers to write clean and efficient PHP code within their views. It provides features like template inheritance, control structures, and easy integration with data from controllers."
+    },
+    {
+      question: "How do you define relationships in Eloquent ORM?",
+      answer: "In Eloquent ORM, relationships between database tables are defined using methods such as hasOne, hasMany, belongsTo, belongsToMany, and morphTo. These methods establish associations between different models based on their database relationships."
+    },
+    {
+      question: "What is Composer, and how does Laravel utilize it?",
+      answer: "Composer is a dependency manager for PHP that allows developers to manage project dependencies. Laravel utilizes Composer to handle its own dependencies and streamline package management within Laravel projects."
+    },
+    {
+      question: "What are the features of Laravel?",
+      answer: "Laravel offers a plethora of features, including routing, middleware, authentication, Eloquent ORM, Blade templating engine, database migrations, and more. It also provides built-in support for caching, session management, and task scheduling."
+    },
+    {
       question: "What is the service container in Laravel?",
       answer: "It's a powerful dependency injection container that manages class dependencies and performs dependency resolution."
     },
@@ -440,6 +572,134 @@ const interviewData = {
 ],
  
   MongoDB: [
+  {
+      question: "What is MongoDB?",
+      answer: "MongoDB is a type of database that uses NoSQL and stores information in a format similar to JSON called BSON."
+  },
+  {
+      question: "How is MongoDB different from SQL databases?",
+      answer: "MongoDB doesn’t need a fixed structure, uses collections instead of tables, and saves data as documents rather than rows."
+  },
+  {
+      question: "What is a document in MongoDB?",
+      answer: "A document is like a JSON object that holds data using pairs of keys and values."
+  },
+  {
+      question: "What is a collection in MongoDB?",
+      answer: "A collection is a group of documents in MongoDB, much like a table in traditional databases."
+  },
+  {
+      question: "What is BSON?",
+      answer: "BSON is a binary format that MongoDB uses to store documents, which is similar to JSON but more efficient."
+  },
+  {
+      question: "How do you insert a document into MongoDB?",
+      answer: "You can use `db. collection. insertOne()` or insertMany()."
+  },
+  {
+      question: "How do you update a document in MongoDB?",
+      answer: "You can use `db. collection. updateOne()` or updateMany() along with update operators like $set."
+  },
+  {
+      question: "How do you delete a document in MongoDB?",
+      answer: "You can use `db. collection. deleteOne()` or deleteMany()."
+  },
+  {
+      question: "How do you query documents in MongoDB?",
+      answer: "You can use `db. collection. find({ key: value })`."
+  },
+  {
+      question: "What are the $set, $inc, and $push operators?",
+      answer: "$set: changes the value of a field. $inc: increases the value of a field. $push: adds an item to an array."
+  },
+  {
+      question: "What is an index in MongoDB?",
+      answer: "An index helps speed up queries by making sure MongoDB doesn't have to check every document."
+  },
+  {
+      question: "How do indexes improve performance?",
+      answer: "They let MongoDB locate the needed data more quickly without going through all the documents."
+  },
+  {
+      question: "What types of indexes are available in MongoDB?",
+      answer: "MongoDB offers several types, including single field, compound, multikey, text, hashed, and geospatial indexes."
+  },
+  {
+      question: "How do you view existing indexes on a collection?",
+      answer: "You can use the command db. collection. getIndexes() to see the indexes that are already in place."
+  },
+  {
+      question: "What is the aggregation pipeline in MongoDB?",
+      answer: "It is a series of steps, such as $match, $group, and $project, that help transform and analyze data."
+  },
+  {
+      question: "What do $match, $group, and $project do?",
+      answer: "$match: It filters the documents to include only the ones that meet certain conditions. $group: It groups the data together based on specific fields, allowing for calculations like sums or averages. $project: It changes the structure of the documents, either by adding, removing, or renaming fields."
+  },
+  {
+      question: "How is aggregation different from map-reduce?",
+      answer: "Aggregation is quicker and easier to use, while map-reduce offers more flexibility but is slower."
+  },
+  {
+      question: "How do you model relationships in MongoDB?",
+      answer: "You can either embed documents or use references"
+  },
+  {
+      question: "What is the difference between embedding and referencing?",
+      answer: "Embedding: Keep related data in one document. Referencing: Point to another collection using an ObjectId."
+  },
+  {
+      question: "When should you use normalized or denormalized data?",
+      answer: "Use normalized data (references) when information is used in multiple places. Use denormalized data (embeddings) for quicker read operations."
+  },
+  {
+      question: "What is sharding in MongoDB?",
+      answer: "Sharding is a method where data is split across multiple servers to distribute the load."
+  },
+  {
+      question: "What is replication?",
+      answer: "Replication involves making copies of data from one MongoDB server to other servers to ensure data is backed up and available."
+  },
+  {
+      question: "What is a replica set?",
+      answer: "A replica set is a group of MongoDB servers where one server acts as the main server, and others support it by keeping copies of the data."
+  },
+  {
+      question: "How does MongoDB ensure high availability?",
+      answer: "MongoDB uses replica sets that automatically switch to a backup server if the main server stops working, ensuring the system stays operational."
+  },
+  {
+      question: "What are capped collections?",
+      answer: "Capped collections are special collections that have a fixed size, and once they reach that size, they start overwriting the oldest data."
+  },
+  {
+      question: "How does MongoDB handle transactions?",
+      answer: "MongoDB has supported multi-document ACID transactions since version 4."
+  },
+  {
+      question: "What's the difference between MongoDB 3. x and 4. x in terms of transactions?",
+      answer: "MongoDB 3. x didn't have full ACID support, but 4. x added the ability to handle multi-document transactions."
+  },
+  {
+      question: "How do you secure a MongoDB database?",
+      answer: "You can secure it by enabling authentication, using roles, setting up IP whitelisting, and using TLS/SSL encryption."
+  },
+  {
+      question: "What is the use of ObjectId in MongoDB?",
+      answer: "It uniquely identifies each document and is created automatically."
+  },
+  {
+      question: "What are the limits of document size in MongoDB?",
+      answer: "The maximum size for a BSON document is 16 MB."
+  },
+  {
+      question: "What is Compass in MongoDB?",
+      answer: "MongoDB Compass is a graphical user interface that allows you to explore and manage data visually."
+  },
+  {
+      question: "How do you backup and restore data in MongoDB?",
+      answer: "Use mongodump to back up data and mongorestore to restore it."
+  },
   {
     "question": "What is the difference between document and collection in MongoDB?",
     "answer": "A document is a single JSON-like object (BSON), while a collection is a group of such documents. Collections are like tables in RDBMS."

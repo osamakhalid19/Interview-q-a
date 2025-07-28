@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet';
 import Navbar from './Navbar';
 import Footer from './Footer';
@@ -93,12 +93,17 @@ const fadeUp = {
 const InterviewPrep = () => {
   const [visible, setVisible] = useState(false);
   const [selected, setSelected] = useState('');
+  const dropdownRef = useRef(null);
   const [dropdownOpen, setDropdownOpen] = useState(false); 
 
   
   const allSubcategories = Object.values(categories).flat();
   const subcategories = selected ? categories[selected] : allSubcategories;
-  const toggleDropdown = () => setDropdownOpen(prev => !prev);
+const toggleDropdown = () => {
+  if (window.innerWidth <= 768) {
+    setDropdownOpen(prev => !prev);
+  }
+};
 
   useEffect(() => {
       const timer = setTimeout(() => setVisible(true), 300);
@@ -113,6 +118,22 @@ const InterviewPrep = () => {
       `transition-all duration-2500 ease-out transform ${
         visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
       } delay-[${delay}ms]`;
+
+       useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target)
+      ) {
+        setDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
   return (
     <>
     <Helmet>
@@ -142,53 +163,54 @@ const InterviewPrep = () => {
       </div>
 
       <div className={`flex justify-center mb-10 ${animate(200)}`}>
-      <div className="relative inline-block text-left group">
-        <button
-          onClick={toggleDropdown}
-          className="flex items-center gap-2 px-6 py-3 font-medium text-black rounded-xl border border-gray-300 transition-all bg-white hover:bg-blue-600 hover:text-white cursor-pointer font-[Poppins] duration-300"
-        >
-          {selected || 'Select Category'}
-          <svg
-            className={`w-4 h-4 transform transition-transform duration-300 ${
-              selected ? 'rotate-180' : 'rotate-0'
-            }`}
-            fill="currentColor"
-            viewBox="0 0 20 20"
-          >
-            <path d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.185l3.71-3.955a.75.75 0 1 1 1.08 1.04l-4.24 4.52a.75.75 0 0 1-1.08 0l-4.24-4.52a.75.75 0 0 1 .02-1.06z" />
-          </svg>
-        </button>
+     <div ref={dropdownRef}
+       className="relative inline-block text-left group">
+  <button
+    onClick={toggleDropdown}
+    className="flex items-center gap-2 px-6 py-3 font-medium text-black rounded-xl border border-gray-300 transition-all bg-white hover:bg-blue-600 hover:text-white cursor-pointer font-[Poppins] duration-300"
+  >
+    {selected || 'Select Category'}
+    <svg
+      className={`w-4 h-4 transform transition-transform duration-300 ${
+        dropdownOpen ? 'rotate-180' : 'rotate-0'
+      }`}
+      fill="currentColor"
+      viewBox="0 0 20 20"
+    >
+      <path d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.185l3.71-3.955a.75.75 0 1 1 1.08 1.04l-4.24 4.52a.75.75 0 0 1-1.08 0l-4.24-4.52a.75.75 0 0 1 .02-1.06z" />
+    </svg>
+  </button>
 
-        <ul
-          className={`
-            absolute left-0 w-full mt-2 rounded-xl shadow-lg bg-white border transition-all duration-300 z-10
-            ${dropdownOpen ? 'visible opacity-100' : 'invisible opacity-0'}
-            group-hover:visible group-hover:opacity-100
-          `}
-        >
-          <li
-            onClick={() => {
-              setSelected('');
-              setDropdownOpen(false); 
-            }}
-            className="px-6 py-3 text-black font-[Poppins] hover:bg-blue-600 hover:text-white cursor-pointer rounded-xl transition-all"
-          >
-            Show All
-          </li>
-          {Object.keys(categories).map((cat) => (
-            <li
-              key={cat}
-              onClick={() => {
-                setSelected(cat);
-                setDropdownOpen(false); 
-              }}
-              className="px-6 py-3 text-black hover:bg-blue-600 hover:text-white cursor-pointer font-[Poppins] transition-all rounded-xl"
-            >
-              {cat}
-            </li>
-          ))}
-        </ul>
-      </div>
+  <ul
+    className={`
+      absolute left-0 w-full mt-2 rounded-xl shadow-lg bg-white border transition-all duration-300 z-10
+      ${dropdownOpen ? 'visible opacity-100' : 'invisible opacity-0'}
+      group-hover:visible group-hover:opacity-100
+    `}
+  >
+    <li
+      onClick={() => {
+        setSelected('');
+      }}
+      className="px-6 py-3 text-black font-[Poppins] hover:bg-blue-600 hover:text-white cursor-pointer rounded-xl transition-all"
+    >
+      Show All
+    </li>
+    {Object.keys(categories).map((cat) => (
+      <li
+        key={cat}
+        onClick={() => {
+          setSelected(cat);
+          setDropdownOpen(false); 
+        }}
+        className="px-6 py-3 text-black hover:bg-blue-600 hover:text-white cursor-pointer font-[Poppins] transition-all rounded-xl"
+      >
+        {cat}
+      </li>
+    ))}
+  </ul>
+</div>
+
     </div>
 
       
