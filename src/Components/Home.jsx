@@ -39,6 +39,15 @@ useEffect(() => {
   return (
     <>
     <Helmet>
+      
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-632V3JW482"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments)};
+  gtag('js', new Date());
+
+  gtag('config', 'G-632V3JW482');
+</script>
       <title>CodeZode – Top Interview Questions & Coding Prep for Developers (2025)</title>
       <meta name='description' content='Prepare for your dream tech job with CodeZode! Get access to top interview questions, answers, and coding challenges for Java, Python, React, and more. Updated for 2025.' />
     </Helmet>

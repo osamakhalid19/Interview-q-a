@@ -21,6 +21,14 @@ const PrivacyPolicy = () => {
   return (
     <>
     <Helmet>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-632V3JW482"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments)};
+  gtag('js', new Date());
+
+  gtag('config', 'G-632V3JW482');
+</script>
       <title>CodeZode Privacy Policy – Your Data, Our Responsibility</title>
       <meta name='description' content='Read how CodeZode collects, uses, and protects your data. Your privacy is important to us. Full GDPR and CCPA compliance information included.' />
     </Helmet>
