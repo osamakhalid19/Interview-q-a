@@ -5,9 +5,10 @@ import Terms from './Components/Terms'
 import AboutUs from './Components/AboutUs'
 import QuestionCategories from './Components/Questions'
 import SingleQuestion from './Components/SingleQuestion'
+import ReactGA from 'react-ga4';
 
 function App() {
-
+ReactGA.initialize("G-632V3JW482"); 
 const router = createBrowserRouter([
   {
     path:"/",

@@ -6,9 +6,15 @@ import { Link } from 'react-router-dom';
 import Card from './Reviews';
 import Footer from './Footer';
 import TopButton from './Topbutton';
+import ReactGA from 'react-ga4';
 
 const Home = () => {
   const [visible, setVisible] = useState(false);
+  const location = useLocation();
+  
+   useEffect(() => {
+    ReactGA.send({ hitType: "pageview", page: location.pathname + location.search });
+  }, [location]);
 
   useEffect(() => {
     const timer = setTimeout(() => {
