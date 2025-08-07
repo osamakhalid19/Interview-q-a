@@ -137,14 +137,7 @@ const toggleDropdown = () => {
   return (
     <>
     <Helmet>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-632V3JW482"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments)};
-  gtag('js', new Date());
 
-  gtag('config', 'G-632V3JW482');
-</script>
       <title>Interview Questions & Answers for Developers – Html, Css, JS, Java, Python, React, Node.js PHP and all interview questions related category (2025)</title>
       <meta name='description' content='Master your next tech interview with hand-picked questions and detailed answers for Java, React, JavaScript, Python, and more. Practice coding, system design, and DSA – all in one place.'/>
     </Helmet>

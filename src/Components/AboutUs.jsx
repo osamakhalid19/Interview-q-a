@@ -26,14 +26,7 @@ const AboutUs = () => {
   return (
     <>
     <Helmet>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-632V3JW482"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments)};
-  gtag('js', new Date());
 
-  gtag('config', 'G-632V3JW482');
-</script>
       <title>About CodeZode – Empowering Developers for Global Tech Careers</title>
       <meta name='description' content='Learn how CodeZode helps developers worldwide land top jobs through structured interview prep, real success stories, and a growing dev community.'/>
     </Helmet>
