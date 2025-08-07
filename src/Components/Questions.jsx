@@ -3,9 +3,11 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { useEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet';
+import { useLocation } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import TopButton from './Topbutton';
+import ReactGA from 'react-ga4';
 import {
   FaHtml5,
   FaCss3Alt,
@@ -95,7 +97,7 @@ const InterviewPrep = () => {
   const [selected, setSelected] = useState('');
   const dropdownRef = useRef(null);
   const [dropdownOpen, setDropdownOpen] = useState(false); 
-
+ 
   
   const allSubcategories = Object.values(categories).flat();
   const subcategories = selected ? categories[selected] : allSubcategories;
@@ -104,6 +106,12 @@ const toggleDropdown = () => {
     setDropdownOpen(prev => !prev);
   }
 };
+
+ const location = useLocation();
+  
+   useEffect(() => {
+    ReactGA.send({ hitType: "pageview", page: location.pathname + location.search });
+  }, [location]);
 
   useEffect(() => {
       const timer = setTimeout(() => setVisible(true), 300);

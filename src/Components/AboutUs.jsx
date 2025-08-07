@@ -1,12 +1,19 @@
 import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import Footer from './Footer';
 import Navbar from './Navbar';
 import { Helmet } from 'react-helmet';
 import TopButton from './Topbutton';
 import toast, { Toaster } from 'react-hot-toast';
+import ReactGA from 'react-ga4';
 
 const AboutUs = () => {
   const [visible, setVisible] = useState(false);
+  const location = useLocation();
+  
+   useEffect(() => {
+    ReactGA.send({ hitType: "pageview", page: location.pathname + location.search });
+  }, [location]);
 
 
   useEffect(() => {

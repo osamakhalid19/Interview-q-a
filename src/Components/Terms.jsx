@@ -3,9 +3,16 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import { Helmet } from 'react-helmet';
 import TopButton from './Topbutton';
+import ReactGA from 'react-ga4';
+import { useLocation } from 'react-router-dom';
 
 const PrivacyPolicy = () => {
   const [visible, setVisible] = useState(false);
+  const location = useLocation();
+  
+   useEffect(() => {
+    ReactGA.send({ hitType: "pageview", page: location.pathname + location.search });
+  }, [location]);
 
   useEffect(() => {
     const timer = setTimeout(() => {
